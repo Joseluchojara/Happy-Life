@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>progreso</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">progreso</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="barbell-outline" [routerLink]="['/ejercicios']">
+        <ion-icon name="barbell-outline"></ion-icon>
+        Ejercicios
+      </ion-tab-button>
+      <ion-tab-button tab="people-circle-outline" [routerLink]="['/entrenador']">
+        <ion-icon name="people-circle-outline"></ion-icon>
+        Entrenador
+      </ion-tab-button>
+      <ion-tab-button tab="podium-outline" [routerLink]="['/progreso']">
+        <ion-icon name="podium-outline"></ion-icon>
+        Progreso
+      </ion-tab-button>
+      <ion-tab-button tab="person-outline" [routerLink]="['/usuario']">
+        <ion-icon name="person-outline"></ion-icon>
+        Yo
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+<ion-button color="success" [routerLink]="['/login']">Success</ion-button>
+</ion-content>

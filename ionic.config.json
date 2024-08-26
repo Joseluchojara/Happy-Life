@@ -1,0 +1,7 @@
+{
+  "name": "HappyLife",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
