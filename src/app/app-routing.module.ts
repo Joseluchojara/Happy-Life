@@ -30,7 +30,15 @@ const routes: Routes = [
   {
     path: 'ejercicios',
     loadChildren: () => import('./pages/ejercicios/ejercicios.module').then( m => m.EjerciciosPageModule)
+  },  {
+    path: 'crear-cuenta',
+    loadChildren: () => import('./crear-cuenta/crear-cuenta.module').then( m => m.CrearCuentaPageModule)
   },
+  {
+    path: 'recuperar-cuenta',
+    loadChildren: () => import('./recuperar-cuenta/recuperar-cuenta.module').then( m => m.RecuperarCuentaPageModule)
+  },
+
 ];
 
 @NgModule({
