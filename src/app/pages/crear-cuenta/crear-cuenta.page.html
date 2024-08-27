@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Login</ion-title>
+    <ion-title>Registro</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -22,19 +22,24 @@
           </ion-item>
           <ion-item>
             <div class="input-container">
+              <ion-input type="email" placeholder="email@gmail.com"></ion-input>
+            </div>
+          </ion-item>
+          <ion-item>
+            <div class="input-container">
               <ion-input type="password" placeholder="Contraseña"></ion-input>
             </div>
           </ion-item>
         </ion-list>
-        <ion-button color="success" expand="full">Login</ion-button>
-        <p><a [routerLink]="['/recuperar-cuenta']">¿Olvidaste tu Contraseña?</a></p>
+        <ion-button color="success" expand="full">Registro</ion-button>
+
       </ion-card-content>
     </ion-card>
 
     <!-- Nueva caja para el mensaje de registro -->
     <ion-card>
       <ion-card-content>
-        <p>¿No tienes cuenta? <a [routerLink]="['/crear-cuenta']">Regístrate</a></p>
+        <p>¿Tienes una cuenta? <a [routerLink]="['/login']">Inicia sesión</a></p>
       </ion-card-content>
     </ion-card>
 
