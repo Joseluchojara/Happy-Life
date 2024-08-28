@@ -38,9 +38,14 @@ const routes: Routes = [
   {
     path: 'recuperar-cuenta',
     loadChildren: () => import('./pages/recuperar-cuenta/recuperar-cuenta.module').then( m => m.RecuperarCuentaPageModule)
-  },  {
+  },
+  {
     path: 'info',
-    loadChildren: () => import('./info/info.module').then( m => m.InfoPageModule)
+    loadChildren: () => import('./pages/info/info.module').then( m => m.InfoPageModule)
+  },
+  {
+    path: 'admin',
+    loadChildren: () => import('./pages/admin/admin.module').then( m => m.AdminPageModule)
   },
 
 

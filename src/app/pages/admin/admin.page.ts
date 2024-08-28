@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart, ChartType } from 'chart.js/auto';
 @Component({
-  selector: 'app-progreso',
-  templateUrl: './progreso.page.html',
-  styleUrls: ['./progreso.page.scss'],
+  selector: 'app-admin',
+  templateUrl: './admin.page.html',
+  styleUrls: ['./admin.page.scss'],
 })
-export class ProgresoPage implements OnInit {
+export class AdminPage implements OnInit {
  // Atributo que almacena los datos del chart
  public chart: Chart;
 
@@ -13,7 +13,7 @@ export class ProgresoPage implements OnInit {
 
    // datos
    const data = {
-     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+     labels: ['pepe', 'February', 'March', 'April', 'May', 'June', 'July'],
      datasets: [{
        label: 'My First Dataset',
        data: [65, 59, 80, 81, 56, 55, 40],
@@ -30,5 +30,4 @@ export class ProgresoPage implements OnInit {
    })
 
  }
-
 }
