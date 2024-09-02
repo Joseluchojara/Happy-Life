@@ -1,0 +1,12 @@
+
+Hola, profe:
+
+Utilicé dos frameworks para el proyecto: Swiper.js para los slides y Chart.js para las gráficas. Para el framework de Swiper, la documentación está https://ionicframework.com/docs/angular/slides. Puedes instalarlo con los siguientes comandos:
+
+npm install @ionic/angular@latest
+npm install swiper@latest
+Para el framework de gráficos, usa el siguiente comando para instalar Chart.js:
+
+npm i chart.js
+Puedes encontrar la documentación de Chart.js en https://www.chartjs.org/.
+
