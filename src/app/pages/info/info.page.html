@@ -1,13 +1,120 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>info</ion-title>
+    <ion-title>Info</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">info</ion-title>
+      <ion-title size="large">Info</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <!-- Swiper Container -->
+  <swiper-container pagination="true" class="swiper-centered">
+    <!-- Slide 1: Saludo y descripción de la app -->
+    <swiper-slide>
+      <ion-card class="card-slide">
+        <ion-card-header>
+          <ion-card-title>¡Bienvenido a HappyLife!</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-icon name="happy-outline" class="icon-slide"></ion-icon>
+          <ion-label>Hola y bienvenido a HappyLife. Esta aplicación está diseñada para ayudarte a mantener un estilo de vida saludable. Desliza para comenzar.</ion-label>
+        </ion-card-content>
+      </ion-card>
+    </swiper-slide>
+
+    <!-- Slide 2: Información personal y presión arterial -->
+    <swiper-slide>
+      <ion-card class="card-slide">
+        <ion-card-header>
+          <ion-card-title>Datos Personales</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-icon name="person-outline" class="icon-slide"></ion-icon>
+          <ion-list>
+            <ion-item>
+              <ion-label position="floating">Nombre</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Altura (cm)</ion-label>
+              <ion-input type="number"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Peso (kg)</ion-label>
+              <ion-input type="number"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Presión Arterial (opcional)</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+          </ion-list>
+          <ion-button expand="full" color="tertiary" class="button-slide">Omitir</ion-button>
+        </ion-card-content>
+      </ion-card>
+    </swiper-slide>
+
+
+
+    <!-- Slide 4: Nivel de actividad -->
+    <swiper-slide>
+      <ion-card class="card-slide">
+        <ion-card-header>
+          <ion-card-title>Tu Nivel de Actividad</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-icon name="barbell-outline" class="icon-slide"></ion-icon>
+          <ion-list>
+            <ion-item>
+              <ion-label>Nivel de actividad:</ion-label>
+              <ion-select placeholder="Selecciona tu nivel">
+                <ion-select-option value="activo">Activo</ion-select-option>
+                <ion-select-option value="medioactivo">Medioactivo</ion-select-option>
+                <ion-select-option value="bajo">Muy Bajo</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </swiper-slide>
+
+    <!-- Slide 5: Opciones de entrenamiento -->
+    <swiper-slide>
+      <ion-card class="card-slide">
+        <ion-card-header>
+          <ion-card-title>Opciones de Entrenamiento</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-icon name="fitness-outline" class="icon-slide"></ion-icon>
+          <ion-list>
+            <ion-item>
+              <ion-label>¿Dónde prefieres entrenar?</ion-label>
+              <ion-select placeholder="Selecciona una opción">
+                <ion-select-option value="casa">En casa</ion-select-option>
+                <ion-select-option value="calistenia">Calistenia</ion-select-option>
+                <ion-select-option value="gym">Gimnasio</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </swiper-slide>
+
+    <!-- Slide 6: Botón de redirección -->
+    <swiper-slide>
+      <ion-card class="card-slide">
+        <ion-card-header>
+          <ion-card-title>¡Listo para comenzar!</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-icon name="checkmark-circle-outline" class="icon-slide"></ion-icon>
+          <ion-label>Ahora que tienes toda la información necesaria, puedes proceder a tu perfil.</ion-label>
+          <ion-button expand="full" color="primary" class="button-slide" [routerLink]="['/usuario']">Ir a mi perfil</ion-button>
+        </ion-card-content>
+      </ion-card>
+    </swiper-slide>
+  </swiper-container>
 </ion-content>

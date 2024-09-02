@@ -1,0 +1,62 @@
+
+.swiper-centered {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Espacio alrededor del contenido */
+}
+
+
+.card-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+    max-height: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-color: #fff; /* Fondo blanco para el card */
+}
+
+/* Estilo del icono en el slide */
+.icon-slide {
+    font-size: 60px;
+    color:  rgb(0, 174, 255);
+    margin: 20px 0;
+}
+
+
+
+/* Estilo de los ion-item en la lista de medidas */
+.measurement-list ion-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd; 
+    border-radius: 8px; /* Bordes redondeados para cada item */
+    padding: 10px; /* Espaciado interno para los items */
+}
+
+/* Estilo del input en la lista de medidas */
+.measurement-list ion-input {
+    width: 100px;
+    padding: 5px;
+}
+
+/* Estilo del botón */
+ion-button {
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo de la etiqueta en el card */
+ion-label {
+    font-size: 16px;
+    color: #333; /* Color del texto */
+}

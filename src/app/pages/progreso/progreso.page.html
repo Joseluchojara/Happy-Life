@@ -1,35 +1,232 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>progreso</ion-title>
+    <ion-title>Progreso</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">progreso</ion-title>
+      <ion-title size="large">Progreso</ion-title>
     </ion-toolbar>
   </ion-header>
-  <canvas id="chart">{{ chart }}</canvas>
-  <ion-tabs>
-    <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="barbell-outline" [routerLink]="['/ejercicios']">
-        <ion-icon name="barbell-outline"></ion-icon>
-        Ejercicios
-      </ion-tab-button>
-      <ion-tab-button tab="people-circle-outline" [routerLink]="['/entrenador']">
-        <ion-icon name="people-circle-outline"></ion-icon>
-        Entrenador
-      </ion-tab-button>
-      <ion-tab-button tab="podium-outline" [routerLink]="['/progreso']">
-        <ion-icon name="podium-outline"></ion-icon>
-        Progreso
-      </ion-tab-button>
-      <ion-tab-button tab="person-outline" [routerLink]="['/usuario']">
-        <ion-icon name="person-outline"></ion-icon>
-        Yo
-      </ion-tab-button>
-    </ion-tab-bar>
-  </ion-tabs>
-<ion-button color="success" [routerLink]="['/login']">Success</ion-button>
+
+  <!-- Swiper Container -->
+  <swiper-container pagination="true" class="swiper-centered">
+    <!-- Slide 1 -->
+    <swiper-slide>
+      <ion-card class="fixed-size-card">
+        <ion-card-header>
+          <ion-card-title>Control de Peso y Altura</ion-card-title>
+          <ion-card-subtitle>Monitorea tu progreso</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <!-- Peso -->
+            <ion-item>
+              <ion-thumbnail slot="start">
+                <img alt="Báscula" src="./assets/icon/bascula.png" />
+              </ion-thumbnail>
+              <ion-label>
+                <canvas id="pesoChart"></canvas>
+                <ion-input placeholder="Ingrese su peso"></ion-input><br>
+                
+            <!-- Interpretación del IMC -->
+            <ion-item lines="none">
+              <ion-label>
+                <p>Interpretación del IMC:</p>
+                <ul>
+                  <li>Menos de 18.5: Bajo peso</li>
+                  <li>18.5 - 24.9: Peso normal</li>
+                  <li>25.0 - 29.9: Sobrepeso</li>
+                  <li>30.0 o más: Obesidad</li>
+                </ul>
+              </ion-label>
+            </ion-item>
+              </ion-label>
+            </ion-item>
+
+            <!-- Altura -->
+            <ion-item>
+              <ion-thumbnail slot="start">
+                <img alt="Altura" src="./assets/icon/altura.png" />
+              </ion-thumbnail>
+              <ion-label>
+                <canvas id="alturaChart"></canvas>
+                <ion-input placeholder="Ingrese su altura"></ion-input>
+              </ion-label>
+            </ion-item>
+
+            <!-- Presión Arterial -->
+            <ion-item>
+              <ion-thumbnail slot="start">
+                <img alt="Presión Arterial" src="./assets/icon/presion-arterial.png" />
+              </ion-thumbnail>
+              <ion-label>
+                <canvas id="presionChart"></canvas>
+                <ion-input placeholder="Ingrese su presión arterial"></ion-input><br>
+                            <!-- Recomendación sobre Presión Arterial -->
+            <ion-item lines="none">
+              <ion-label>
+                <p>Recomendación sobre presión arterial saludable:</p>
+                <ul>
+                  <li>Sistólica (máxima) menos de 120 mm Hg</li>
+                  <li>Diastólica (mínima) menos de 80 mm Hg</li>
+                  <li>Mantener un estilo de vida saludable ayuda a prevenir hipertensión.</li>
+                </ul>
+              </ion-label>
+            </ion-item>
+
+              </ion-label>
+            </ion-item>
+
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+
+    </swiper-slide>
+
+    <!-- Slide 2 -->
+    <swiper-slide>
+      <ion-card class="fixed-size-card">
+        <ion-card-header>
+          <ion-card-title>Card Title</ion-card-title>
+          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-item>
+              <ion-thumbnail slot="start">
+                <img alt="Silhouette of mountains" src="./assets/icon-cuerpo/biceps.png" />
+              </ion-thumbnail>
+              <ion-label><canvas id="bicepsChart"></canvas><ion-input placeholder="biceps"></ion-input></ion-label>
+            </ion-item>
+            
+            <ion-item>
+              <ion-thumbnail slot="start">
+                <img alt="Silhouette of mountains" src="./assets/icon-cuerpo/antebrazos.png" /><br>
+              </ion-thumbnail>
+              <ion-label>
+                <canvas id="antebrazosChart"></canvas><ion-input placeholder="biceps"></ion-input></ion-label>
+            </ion-item>
+            
+            <ion-item>
+              <ion-thumbnail slot="start">
+                <img alt="Silhouette of mountains" src="./assets/icon-cuerpo/muslos.png" /><br>
+              </ion-thumbnail>
+              <ion-label><canvas id="muslosChart"></canvas><ion-input placeholder="biceps"></ion-input></ion-label>
+            </ion-item>
+            
+            <ion-item lines="none">
+              <ion-thumbnail slot="start">
+                <img alt="Silhouette of mountains" src="./assets/icon-cuerpo/pantorrillas.png" /><br>
+              </ion-thumbnail>
+              <ion-label><canvas id="pantorillaChart"></canvas><ion-input placeholder="biceps"></ion-input></ion-label>
+            </ion-item>
+
+            <ion-item lines="none">
+              <ion-thumbnail slot="start">
+                <img alt="Silhouette of mountains" src="./assets/icon-cuerpo/abdomen.png" /><br>
+              </ion-thumbnail>
+              <ion-label><canvas id="pectoralesChart"></canvas><ion-input placeholder="biceps"></ion-input></ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </swiper-slide>
+
+
+
+
+    <swiper-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Progreso de fotos en meses</ion-card-title>
+          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-grid class="meses-grid">
+            <ion-row>
+              <ion-col size="6">
+                <ion-thumbnail class="contain-thumbnail">
+                  <img alt="Mes 1" src="./assets/icon-cuerpo/mes-1.png" />
+                </ion-thumbnail>
+                <ion-label>Mes 1</ion-label><br>
+                <ion-button color="danger">Borrar</ion-button>
+              </ion-col>
+              <ion-col size="6">
+                <ion-thumbnail class="contain-thumbnail">
+                  <img alt="Mes 2" src="./assets/icon-cuerpo/mes-2.png" />
+                </ion-thumbnail>
+                <ion-label>Mes 2</ion-label><br>
+                <ion-button color="danger">Borrar</ion-button>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="6">
+                <ion-thumbnail class="contain-thumbnail">
+                  <img alt="Mes 3" src="./assets/icon-cuerpo/mes-3.png" />
+                </ion-thumbnail>
+                <ion-label>Mes 3</ion-label><br>
+                <ion-button color="danger">Borrar</ion-button>
+              </ion-col>
+              <ion-col size="6">
+                <ion-thumbnail class="contain-thumbnail">
+                  <img alt="Mes 4" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                </ion-thumbnail>
+                <ion-label>Mes 4</ion-label><br>
+                <ion-button color="danger">Borrar</ion-button>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="6">
+                <ion-thumbnail class="contain-thumbnail">
+                  <img alt="Mes 5" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                </ion-thumbnail>
+                <ion-label>Mes 5</ion-label><br>
+                <ion-button color="danger">Borrar</ion-button>
+              </ion-col>
+              <ion-col size="6">
+                <ion-thumbnail class="contain-thumbnail">
+                  <img alt="Mes 6" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                </ion-thumbnail>
+                <ion-label>Mes 6</ion-label><br>
+                <ion-button color="danger">Borrar</ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+      
+
+      
+    </swiper-slide>
+  </swiper-container>
+
+
+
 </ion-content>
+
+
+
+<ion-item slot="fixed">Ejercicios <ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="barbell-outline" [routerLink]="['/ejercicios']">
+      <ion-icon name="barbell-outline"></ion-icon>
+      Ejercicios
+    </ion-tab-button>
+    <ion-tab-button tab="people-circle-outline" [routerLink]="['/entrenador']">
+      <ion-icon name="people-circle-outline"></ion-icon>
+      Entrenador
+    </ion-tab-button>
+    <ion-tab-button tab="podium-outline" [routerLink]="['/progreso']">
+      <ion-icon name="podium-outline"></ion-icon>
+      Progreso
+    </ion-tab-button>
+    <ion-tab-button tab="person-outline" [routerLink]="['/usuario']">
+      <ion-icon name="person-outline"></ion-icon>
+      Yo
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
+</ion-item>

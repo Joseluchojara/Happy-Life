@@ -5,49 +5,62 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div id="container">
+  <div id="container" style="text-align: center; padding: 16px;">
+    <img class="img-logo" src="./assets/icon/logo-happy-life.jpeg" alt="Logo Happy Life" style="width: 120px; margin-bottom: 20px;">
+    
     <ion-card>
       <ion-card-header>
-        <ion-card-title>Happy Life</ion-card-title>
-        <div class="icons-container"><ion-icon name="person-circle-outline"></ion-icon> </div>
+        <!-- Centrar el título y hacer que la fuente sea más llamativa -->
+        <ion-card-title class="centered-title">Happy Life</ion-card-title>
         
+        <!-- Icono centrado -->
+        <div class="icons-container centered-icon">
+          <ion-icon name="person-circle-outline"></ion-icon>
+        </div>
       </ion-card-header>
 
       <ion-card-content>
         <ion-list>
+          <!-- Usuario -->
           <ion-item>
             <div class="input-container">
-              <ion-input placeholder="Usuario"></ion-input>
+              <ion-input [(ngModel)]="usuario" placeholder="👤 Usuario"></ion-input>
+            </div>
+          </ion-item>
+
+          <!-- Contraseña -->
+          <ion-item>
+
+            <div class="input-container">
+              <ion-input [(ngModel)]="email" type="mail" placeholder="📧 email@gmail.com"></ion-input>
             </div>
           </ion-item>
           <ion-item>
             <div class="input-container">
-              <ion-input type="email" placeholder="email@gmail.com"></ion-input>
-            </div>
-          </ion-item>
-          <ion-item>
-            <div class="input-container">
-              <ion-input type="password" placeholder="Contraseña"></ion-input>
+              <ion-input [(ngModel)]="contrasena" type="password" placeholder="🔒 Contraseña"></ion-input>
             </div>
           </ion-item>
         </ion-list>
-        <ion-button color="success" expand="full">Registro</ion-button>
+
+        <!-- Botón de Login -->
+        <ion-button color="success" expand="full" (click)="crearCuenta()">Login</ion-button>
 
       </ion-card-content>
     </ion-card>
-
-    <!-- Nueva caja para el mensaje de registro -->
+ 
+    <!-- Mensaje de inicio de sesión -->
     <ion-card>
       <ion-card-content>
         <p>¿Tienes una cuenta? <a [routerLink]="['/login']">Inicia sesión</a></p>
       </ion-card-content>
     </ion-card>
 
-    <div class="download-section">
-      <p>Descarga la app.</p>
-      <div class="icons-container">
-        <img src="./assets/icon/sitio-web.png" alt="">
-        <img src="./assets/icon/Logo-play-store.png" alt="Logo Play Store" />
+    <!-- Sección de descarga de la app -->
+    <div class="download-section" style="margin-top: 20px;">
+      <p>Descarga la app:</p>
+      <div class="icons-container" style="display: flex; justify-content: center; gap: 16px;">
+        <img src="./assets/icon/sitio-web.png" alt="Sitio Web" style="width: 40px;">
+        <img src="./assets/icon/Logo-play-store.png" alt="Logo Play Store" style="width: 40px;">
       </div>
     </div>
   </div>

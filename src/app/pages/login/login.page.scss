@@ -8,8 +8,27 @@
 
 ion-card {
   width: 100%;
-  max-width: 400px; /* Ajusta el ancho máximo según sea necesario */
+  max-width: 400px; 
   margin: 8px 0; /* Espaciado entre tarjetas */
+}
+.centered-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Arial', sans-serif; 
+  color: #4caf50; /* Color verde para destacar */
+  margin-bottom: 10px;
+}
+
+.centered-icon {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+ion-icon {
+  font-size: 40px;
+  color: #4caf50; /* Color verde para el icono */
 }
 
 .input-container {
@@ -19,11 +38,9 @@ ion-card {
   border: 1px solid #ccc; /* Color de borde de la caja */
   border-radius: 4px; /* Bordes redondeados */
   padding: 8px; /* Espaciado interno */
-  background-color: #f9f9f9; /* Color de fondo opcional */
+  background-color: #f9f9f9; 
   width: 100%;
 }
-
-
 
 .download-section {
   display: flex;
@@ -34,15 +51,25 @@ ion-card {
 
 .icons-container {
   display: flex;
-  align-items: center; /* Alinea los íconos verticalmente */
+  align-items: center; 
   gap: 16px; /* Espacio entre el ícono y la imagen */
 }
 
 ion-icon {
-  font-size: 30px; /* Ajusta el tamaño del icono */
+  font-size: 30px; 
 }
 
 img {
-  max-width: 100px; /* Ajusta el ancho máximo de la imagen */
+  max-width: 100px; 
   height: auto; /* Mantiene la relación de aspecto */
+}
+.img-logo {
+  max-width: 200px; /* Ajusta el ancho máximo de la imagen */
+  height: auto; /* Mantiene la relación de aspecto */
+}
+
+.alert {
+  color: red;
+  font-size: 0.8em;
+  margin-top: 0.5em;
 }

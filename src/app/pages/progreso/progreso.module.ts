@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { ProgresoPageRoutingModule } from './progreso-routing.module';
 
 import { ProgresoPage } from './progreso.page';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { ProgresoPage } from './progreso.page';
     IonicModule,
     ProgresoPageRoutingModule
   ],
-  declarations: [ProgresoPage]
+  declarations: [ProgresoPage],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class ProgresoPageModule {}

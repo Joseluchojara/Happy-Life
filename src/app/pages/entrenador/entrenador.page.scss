@@ -1,0 +1,24 @@
+.item-container {
+    display: flex;
+    justify-content: space-between; /* Distribuir espacio entre elementos */
+    align-items: center;
+    font-size: 16px; /* Tamaño del texto */
+}
+
+.item-container ion-icon {
+    font-size: 30px; /* Tamaño del ícono */
+}
+
+.icon-mes {
+    font-size: 60px; /* Tamaño del ícono */
+}
+
+.item-label {
+    flex: 1; 
+}
+
+.item-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre los botones */
+}

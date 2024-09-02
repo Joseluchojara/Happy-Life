@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -47,6 +47,35 @@ const routes: Routes = [
     path: 'admin',
     loadChildren: () => import('./pages/admin/admin.module').then( m => m.AdminPageModule)
   },
+  {
+    path: 'curriculum',
+    loadChildren: () => import('./pages/curriculum/curriculum.module').then( m => m.CurriculumPageModule)
+  },
+  {
+    path: 'chat',
+    loadChildren: () => import('./pages/chat/chat.module').then( m => m.ChatPageModule)
+  },
+  {
+    path: 'ejercicio-gym',
+    loadChildren: () => import('./pages/ejercicio-gym/ejercicio-gym.module').then( m => m.EjercicioGymPageModule)
+  },
+  {
+    path: 'ejercicio-casa',
+    loadChildren: () => import('./pages/ejercicio-casa/ejercicio-casa.module').then( m => m.EjercicioCasaPageModule)
+  },
+  {
+    path: 'ejercicio-calistenia',
+    loadChildren: () => import('./pages/ejercicio-calistenia/ejercicio-calistenia.module').then( m => m.EjercicioCalisteniaPageModule)
+  },
+  {
+    path: 'not-found',
+    loadChildren: () => import('./pages/not-found/not-found.module').then( m => m.NotFoundPageModule)
+  },
+
+
+
+
+
 
 
 ];

@@ -1,0 +1,85 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Ejercicios-cali</ion-title>
+    <ion-button color="success" [routerLink]="['/ejercicios']">Success</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+
+  </ion-header>
+
+  <!-- Swiper Container -->
+  <swiper-container pagination="true" class="swiper-centered">
+    <swiper-slide>
+      <ion-card>
+        <img alt="Silhouette of mountains" src="./assets/Calistenia/calistenia-principiante.jpg" />
+        <ion-card-header>
+          <ion-list>
+            <ion-item *ngFor="let Dia of Dias; let index">
+              <ion-avatar slot="start">
+                <img [src]="'https://picsum.photos/80/80?random=' + index" alt="avatar" />
+              </ion-avatar>
+              <ion-label>{{ Dia }}
+                <br>
+                <ion-button color="success" [routerLink]="['/login']">Success</ion-button>
+                
+
+              </ion-label>
+            </ion-item>
+          </ion-list>
+
+        </ion-card-header>
+      </ion-card>
+      
+    </swiper-slide>
+
+    <swiper-slide>
+      
+      <ion-card>
+        <img alt="Silhouette of mountains" src="./assets/Calistenia/calistenia-intermedio.jpg" />
+        <ion-card-header>
+          <ion-list>
+            <ion-item *ngFor="let Dia of Dias; let index">
+              <ion-avatar slot="start">
+                <img [src]="'https://picsum.photos/80/80?random=' + index" alt="avatar" />
+              </ion-avatar>
+              <ion-label>{{ Dia }}
+                <br>
+                <ion-button color="success" [routerLink]="['/login']">Success</ion-button>
+                
+
+              </ion-label>
+            </ion-item>
+          </ion-list>
+
+        </ion-card-header>
+      </ion-card>
+    </swiper-slide>
+    <swiper-slide>
+      <ion-card>
+        <img alt="Silhouette of mountains" src="./assets/Calistenia/calistenia-avanzado.png" />
+        <ion-card-header>
+          <ion-list>
+            <ion-item *ngFor="let Dia of Dias; let index">
+              <ion-avatar slot="start">
+                <img [src]="'https://picsum.photos/80/80?random=' + index" alt="avatar" />
+              </ion-avatar>
+              <ion-label>{{ Dia }}
+                <br>
+                <ion-button color="success" [routerLink]="['/login']">Success</ion-button>
+                
+
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-card-header>
+      </ion-card>
+      
+    </swiper-slide>
+
+  </swiper-container>
+    <!-- Tabs -->
+
+</ion-content>

@@ -1,0 +1,32 @@
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.card-grid ion-card {
+  padding: 10px;
+  text-align: center;
+}
+
+.card-grid ion-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-grid ion-card-header ion-icon {
+  margin-right: 8px;
+  font-size: 24px;
+  color: var(--ion-color-primary);
+}
+
+.image-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.image-container img {
+  width: 100px; 
+  height: auto;
+}

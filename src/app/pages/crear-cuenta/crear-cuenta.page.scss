@@ -1,49 +1,69 @@
 #container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 16px; /* Espaciado alrededor del contenido */
-  }
-  
-  ion-card {
-    width: 100%;
-    max-width: 400px; /* Ajusta el ancho máximo según sea necesario */
-    margin: 8px 0; /* Espaciado entre tarjetas */
-  }
-  
-  .input-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #ccc; /* Color de borde de la caja */
-    border-radius: 4px; /* Bordes redondeados */
-    padding: 8px; /* Espaciado interno */
-    background-color: #f9f9f9; /* Color de fondo opcional */
-    width: 100%;
-  }
-  
-  
-  
-  .download-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 16px; /* Espaciado superior */
-  }
-  
-  .icons-container {
-    display: flex;
-    align-items: center; /* Alinea los íconos verticalmente */
-    gap: 16px; /* Espacio entre el ícono y la imagen */
-  }
-  
-  ion-icon {
-    font-size: 30px; /* Ajusta el tamaño del icono */
-  }
-  
-  img {
-    max-width: 100px; /* Ajusta el ancho máximo de la imagen */
-    height: auto; /* Mantiene la relación de aspecto */
-  }
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px; /* Espaciado alrededor del contenido */
+}
+
+ion-card {
+  width: 100%;
+  max-width: 400px; 
+  margin: 8px 0; /* Espaciado entre tarjetas */
+}
+.centered-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Arial', sans-serif; 
+  color: #4caf50; /* Color verde para destacar */
+  margin-bottom: 10px;
+}
+
+.centered-icon {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+ion-icon {
+  font-size: 40px;
+  color: #4caf50; /* Color verde para el icono */
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc; /* Color de borde de la caja */
+  border-radius: 4px; /* Bordes redondeados */
+  padding: 8px; /* Espaciado interno */
+  background-color: #f9f9f9; /* Color de fondo opcional */
+  width: 100%;
+}
+
+.download-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16px; /* Espaciado superior */
+}
+
+.icons-container {
+  display: flex;
+  align-items: center; /* Alinea los íconos verticalmente */
+  gap: 16px; /* Espacio entre el ícono y la imagen */
+}
+
+ion-icon {
+  font-size: 30px; /* Ajusta el tamaño del icono */
+}
+
+img {
+  max-width: 100px; /* Ajusta el ancho máximo de la imagen */
+  height: auto; /* Mantiene la relación de aspecto */
+}
+.img-logo {
+  max-width: 200px; /* Ajusta el ancho máximo de la imagen */
+  height: auto; /* Mantiene la relación de aspecto */
+}

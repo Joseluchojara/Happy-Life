@@ -1,0 +1,16 @@
+
+.input-tab {
+    flex: 2; /* Aumenta el ancho del botón del tab que contiene el input */
+  }
+  
+  .custom-input {
+    width: 100%; 
+    --padding-start: 0; 
+    --padding-end: 0; 
+  }
+  
+ 
+  ion-tab-button {
+    --padding: 0 10px; 
+  }
+  

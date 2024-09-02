@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>curriculum</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <img class="img-logo" src="./assets/icon/logo-happy-life.jpeg" alt="Logo Happy Life">
+    
+    <ion-card>
+      <ion-card-header>
+
+        <ion-card-title class="centered-title">Happy Life</ion-card-title>
+        
+        <!-- Icono centrado -->
+        <div class="icons-container centered-icon">
+          <ion-icon name="person-circle-outline"></ion-icon>
+        </div>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-list>
+          <ion-item class="centered-item">
+            
+          </ion-item>
+            <p>Para unirte a nuestro equipo como profesor, por favor sigue estos pasos:</p>
+            <p>1. Envía un correo a <strong>happylife&#64;gmail.com</strong> con tu información:</p>
+            <ul>
+              <li>Tu correo electrónico</li>
+              <li>Tu perfil de LinkedIn</li>
+              <li>La sección en la que estás interesado</li>
+            </ul>
+            <p>2. Te enviaremos un formulario para completar.</p>
+            <p>3. Al finalizar, te contactaremos para una videollamada donde te explicaremos cómo funciona la aplicación.</p>
+
+        </ion-list>
+       
+      </ion-card-content>
+    </ion-card>
+
+
+    <ion-card>
+      <ion-card-content>
+        <a [routerLink]="['/login']">Volver al inicio de sesión</a>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Sección de descarga de la app -->
+    <div class="download-section">
+      <p>Descarga la app.</p>
+      <div class="icons-container">
+        <img src="./assets/icon/sitio-web.png" alt="">
+        <img src="./assets/icon/Logo-play-store.png" alt="Logo Play Store">
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { InfoPageRoutingModule } from './info-routing.module';
 
 import { InfoPage } from './info.page';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { InfoPage } from './info.page';
     IonicModule,
     InfoPageRoutingModule
   ],
-  declarations: [InfoPage]
+  declarations: [InfoPage],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class InfoPageModule {}

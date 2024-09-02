@@ -1,50 +1,69 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>Login</ion-title>
-    
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <div id="container">
+    <img class="img-logo" src="./assets/icon/logo-happy-life.jpeg" alt="Logo Happy Life">
+    
     <ion-card>
       <ion-card-header>
-        <ion-card-title>Happy Life</ion-card-title>
-        <div class="icons-container"><ion-icon name="person-circle-outline"></ion-icon> </div>
+
+        <ion-card-title class="centered-title">Happy Life</ion-card-title>
         
+ 
+        <div class="icons-container centered-icon">
+          <ion-icon name="person-circle-outline"></ion-icon>
+        </div>
       </ion-card-header>
 
       <ion-card-content>
         <ion-list>
+          <!-- Usuario -->
           <ion-item>
             <div class="input-container">
-              <ion-input placeholder="Usuario"></ion-input>
+              <ion-input placeholder="👤 Usuario" [(ngModel)]="usuario"></ion-input>
             </div>
           </ion-item>
+
+          <!-- Contraseña -->
           <ion-item>
             <div class="input-container">
-              <ion-input type="password" placeholder="Contraseña"></ion-input>
+              <ion-input type="password" placeholder="🔒 Contraseña" [(ngModel)]="contrasena"></ion-input>
             </div>
+
           </ion-item>
         </ion-list>
-        <ion-button color="success" expand="full">Login</ion-button>
+
+        <!-- Botón de Login -->
+        <ion-button color="success" expand="full"  (click)="validarLogin()">Login</ion-button>
+
+        <!-- Enlace de recuperación de cuenta -->
         <p><a [routerLink]="['/recuperar-cuenta']">¿Olvidaste tu Contraseña?</a></p>
       </ion-card-content>
     </ion-card>
-
-    <!-- Nueva caja para el mensaje de registro -->
     <ion-card>
       <ion-card-content>
         <p>¿No tienes cuenta? <a [routerLink]="['/crear-cuenta']">Regístrate</a></p>
       </ion-card-content>
     </ion-card>
 
+    <ion-card>
+      <ion-card-content>
+        <p>¿Te apasiona ayudar a otros a alcanzar sus metas de salud y bienestar? ¡Únete a nuestro equipo como entrenador personal! <a [routerLink]="['/curriculum']">Únete</a></p>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Sección de descarga de la app -->
     <div class="download-section">
       <p>Descarga la app.</p>
       <div class="icons-container">
         <img src="./assets/icon/sitio-web.png" alt="">
-        <img src="./assets/icon/Logo-play-store.png" alt="Logo Play Store" />
+        <img src="./assets/icon/Logo-play-store.png" alt="Logo Play Store">
       </div>
     </div>
   </div>
+
 </ion-content>

@@ -1,16 +1,53 @@
-ion-grid {
-    --ion-grid-width: 50%;
-  
-    --ion-grid-width-xs: 50%;
-    --ion-grid-width-sm: 288px;
-    --ion-grid-width-md: 384px;
-    --ion-grid-width-lg: 480px;
-    --ion-grid-width-xl: 570px;
-  }
-  
-  ion-col {
-    background-color: #135d54;
-    border: solid 1px #fff;
-    color: #fff;
+/* Asegura que el swiper-container ocupe toda la altura disponible */
+.swiper-centered {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Centra el swiper-container verticalmente */
+    padding: 20px 0; /* Ajusta el padding según sea necesario */
+}
+
+/* Centra el ion-card en el slide */
+.card-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+    margin: 0 auto;
     text-align: center;
-  }
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    background-color: #fff;
+    min-height: 600px; 
+}
+
+/* Estilo de la imagen en el card */
+.card-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Estilo del icono en el slide */
+.icon-slide {
+    font-size: 60px;
+    color: var(--ion-color-primary);
+    margin: 20px 0;
+}
+
+/* Estilo del botón */
+.button-slide {
+    margin-top: 20px;
+}
+
+/* Estilo de las tarjetas de contenido */
+.ion-card-content p {
+    margin: 10px 0;
+    line-height: 1.5;
+    color: #333;
+}

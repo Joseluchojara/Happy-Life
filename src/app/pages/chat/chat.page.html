@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-footer>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="barbell-outline" [routerLink]="['/entrenador']">
+        <ion-icon name="close-circle-outline" ></ion-icon>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="people-circle-outline" class="input-tab">
+        <ion-icon name="person-circle-outline"></ion-icon>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="podium-outline" id="present-alert">
+        <ion-icon name="videocam"></ion-icon>
+
+        <ion-alert
+          trigger="present-alert"
+          header="¿Seguro que quieres llamar...?"
+          [buttons]="alertButtons"
+          (didDismiss)="setResult($event)"
+></ion-alert>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="person-outline">
+        <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-footer>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">chat</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+</ion-content>
+
+<ion-footer>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="barbell-outline">
+      <ion-icon name="add-circle"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="people-circle-outline" class="input-tab">
+      <ion-item>
+        <ion-input placeholder="Escribir mensaje" class="custom-input"></ion-input>
+      </ion-item>
+    </ion-tab-button>
+
+    <ion-tab-button tab="podium-outline">
+      <ion-icon name="send"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="person-outline">
+      <ion-icon name="mic"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-footer>
