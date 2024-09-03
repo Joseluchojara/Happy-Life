@@ -26,9 +26,9 @@
       </ion-card>
     </swiper-slide>
 
-    <!-- Slide 2: Información personal y presión arterial -->
+    <!-- Slide 2: Información personal incluyendo el sexo -->
     <swiper-slide>
-      <ion-card class="card-slide">
+
         <ion-card-header>
           <ion-card-title>Datos Personales</ion-card-title>
         </ion-card-header>
@@ -37,27 +37,27 @@
           <ion-list>
             <ion-item>
               <ion-label position="floating">Nombre</ion-label>
-              <ion-input type="text"></ion-input>
+              <ion-input type="text" [(ngModel)]="nombre"></ion-input>
             </ion-item>
             <ion-item>
               <ion-label position="floating">Altura (cm)</ion-label>
-              <ion-input type="number"></ion-input>
+              <ion-input type="number" [(ngModel)]="altura"></ion-input>
             </ion-item>
             <ion-item>
               <ion-label position="floating">Peso (kg)</ion-label>
-              <ion-input type="number"></ion-input>
+              <ion-input type="number" [(ngModel)]="peso"></ion-input>
             </ion-item>
             <ion-item>
-              <ion-label position="floating">Presión Arterial (opcional)</ion-label>
-              <ion-input type="text"></ion-input>
+              <ion-label>Sexo</ion-label>
+              <ion-select placeholder="sexo" [(ngModel)]="sexo">
+                <ion-select-option value="hombre">Hombre</ion-select-option>
+                <ion-select-option value="mujer">Mujer</ion-select-option>
+              </ion-select>
             </ion-item>
           </ion-list>
-          <ion-button expand="full" color="tertiary" class="button-slide">Omitir</ion-button>
         </ion-card-content>
-      </ion-card>
+
     </swiper-slide>
-
-
 
     <!-- Slide 4: Nivel de actividad -->
     <swiper-slide>
@@ -70,7 +70,7 @@
           <ion-list>
             <ion-item>
               <ion-label>Nivel de actividad:</ion-label>
-              <ion-select placeholder="Selecciona tu nivel">
+              <ion-select placeholder="Selecciona tu nivel" [(ngModel)]="nivelActividad">
                 <ion-select-option value="activo">Activo</ion-select-option>
                 <ion-select-option value="medioactivo">Medioactivo</ion-select-option>
                 <ion-select-option value="bajo">Muy Bajo</ion-select-option>
@@ -92,7 +92,7 @@
           <ion-list>
             <ion-item>
               <ion-label>¿Dónde prefieres entrenar?</ion-label>
-              <ion-select placeholder="Selecciona una opción">
+              <ion-select placeholder="Selecciona una opción" [(ngModel)]="lugarEntrenamiento">
                 <ion-select-option value="casa">En casa</ion-select-option>
                 <ion-select-option value="calistenia">Calistenia</ion-select-option>
                 <ion-select-option value="gym">Gimnasio</ion-select-option>
@@ -112,7 +112,7 @@
         <ion-card-content>
           <ion-icon name="checkmark-circle-outline" class="icon-slide"></ion-icon>
           <ion-label>Ahora que tienes toda la información necesaria, puedes proceder a tu perfil.</ion-label>
-          <ion-button expand="full" color="primary" class="button-slide" [routerLink]="['/usuario']">Ir a mi perfil</ion-button>
+          <ion-button expand="full" color="primary" class="button-slide" (click)="validarDatos()">Ir a mi perfil</ion-button>
         </ion-card-content>
       </ion-card>
     </swiper-slide>

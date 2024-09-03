@@ -68,7 +68,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/ejercicio-calistenia/ejercicio-calistenia.module').then( m => m.EjercicioCalisteniaPageModule)
   },
   {
-    path: 'not-found',
+    path: '* *',
     loadChildren: () => import('./pages/not-found/not-found.module').then( m => m.NotFoundPageModule)
   },
 

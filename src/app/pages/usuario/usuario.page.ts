@@ -7,20 +7,26 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./usuario.page.scss'],
 })
 export class UsuarioPage implements OnInit {
+  nombre: string = "";
+  altura: number | null = null;
+  peso: number | null = null;
+  sexo: string = "";
+  nivelActividad: string = "";
+  lugarEntrenamiento: string = "";
 
-  Apellido: string = "";
-  Edad!: number;
-  usuario: string = "";
-
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
-
-  ngOnInit() {
-    // Recuperar el estado de navegación si existe
-    const navigation = this.router.getCurrentNavigation();
-    if (navigation?.extras.state) {
-      this.usuario = navigation.extras.state['user'] || '';
-      this.Edad = navigation.extras.state['ed'] || null;
-      this.Apellido = navigation.extras.state['ape'] || '';
-    }
+  constructor(private router: Router, private activerouter: ActivatedRoute) { 
+  
+    this.activerouter.queryParams.subscribe(params => {
+      if (this.router.getCurrentNavigation()?.extras.state) {
+        this.nombre = this.router.getCurrentNavigation()?.extras?.state?.['nombre'];
+        this.altura = this.router.getCurrentNavigation()?.extras?.state?.['altura'];
+        this.peso = this.router.getCurrentNavigation()?.extras?.state?.['peso'];
+        this.sexo = this.router.getCurrentNavigation()?.extras?.state?.['sexo'];
+        this.nivelActividad = this.router.getCurrentNavigation()?.extras?.state?.['nivelActividad'];
+        this.lugarEntrenamiento = this.router.getCurrentNavigation()?.extras?.state?.['lugarEntrenamiento'];
+      }
+    });
   }
+
+  ngOnInit() {}
 }
